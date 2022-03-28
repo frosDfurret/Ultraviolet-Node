@@ -9,5 +9,5 @@ if [[ -d "static" && -n "$(find static -prune -empty 2>/dev/null)" ]] || [[ ! -d
   git submodule update --init --recursive
 fi
 
-
+npm install fetch-headers
 npm start || [[ $fix = 1 ]] && npm install && npm update && git submodule update --init --recursive
